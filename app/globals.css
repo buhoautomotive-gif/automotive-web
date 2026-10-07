@@ -211,18 +211,27 @@ h3 {
 }
 .wordmark {
   display: inline-flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
   width: fit-content;
   line-height: 1;
 }
-.wordmark > span {
-  font-size: 31px;
+.brand-logo {
+  display: block;
+  width: 48px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+.brand-text > span {
+  font-size: 27px;
   font-weight: 600;
   letter-spacing: 5px;
-}
-.brand-dot {
-  color: var(--color-accent);
-  letter-spacing: 0;
 }
 .wordmark small {
   font-size: 8px;
@@ -1111,12 +1120,8 @@ input::placeholder {
     min-height: 75px;
     gap: 16px;
   }
-  .wordmark > span {
-    font-size: 26px;
-  }
-  .wordmark small {
-    font-size: 6px;
-    letter-spacing: 3.9px;
+  .site-header .brand-text {
+    display: none;
   }
   .header-actions .button {
     font-size: 8px;

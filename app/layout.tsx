@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   },
   description: site.description,
   ...(site.url ? { metadataBase: new URL(site.url) } : {}),
+  icons: {
+    icon: [{ url: "/images/buho-icon.png", type: "image/png", sizes: "32x32" }],
+    apple: [{ url: "/images/buho-apple-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
     title: "BÚHO AUTOMOTIVE",
     description: site.description,

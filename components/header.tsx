@@ -1,14 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
+import logo from "@/public/images/buho-logo.png";
 import { navigation } from "@/config/site";
 import { ButtonLink, Container } from "@/components/ui";
 import { MobileNavigation } from "@/components/mobile-navigation";
 export function Wordmark() {
   return (
     <Link href="/" className="wordmark" aria-label="Búho Automotive, inicio">
-      <span>
-        BÚHO<span className="brand-dot">.</span>
+      <Image src={logo} alt="" className="brand-logo" sizes="48px" />
+      <span className="brand-text">
+        <span>BÚHO</span>
+        <small>AUTOMOTIVE</small>
       </span>
-      <small>AUTOMOTIVE</small>
     </Link>
   );
 }
